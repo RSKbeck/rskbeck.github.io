@@ -1,6 +1,7 @@
 $(document).ready(function(){
 		$("#submit").click(function(event){
-			$.post( "https://75.128.13.118:8082", $("#textbox").val(), function( data ) {
+			var jsonVal = JSON.stringify({ "msg": $("#textbox").val() });    
+			$.post( "https://75.128.13.118:8082", jsonVal, function( data ) {
 				$( "#result" ).html( data );
 			});
 		});
