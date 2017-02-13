@@ -1,0 +1,44 @@
+#input {
+	position: absolute;
+	top: 1%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, 0%);
+	width: 98%;
+	height: 5%;
+	background-color: #CCC;
+	border: solid;
+	border-width: 5px;
+	border-color: #CCC;
+	border-radius: 15px; 
+}
+
+#textbox {
+	position: absolute;
+	left: 5px;
+	width:79.5%;
+	height: 100%;
+}
+
+#submit {
+	position: absolute;
+	right: 5px;
+	width: 19.5%;
+	height: 100%;
+	border-style: none;
+	border-radius: 15px;
+}
+
+#result {
+	position: absolute;
+	top: 9%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+    width: 98%;
+    height: 89%;
+	background-color: #CCC;
+	border: solid;
+	border-color: #CCC;
+	border-radius: 15px; 
+}
