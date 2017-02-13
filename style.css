@@ -1,3 +1,7 @@
+body {
+	background-color: #DDD
+}
+
 #input {
 	position: absolute;
 	top: 1%;
@@ -6,18 +10,17 @@
 	transform: translate(-50%, 0%);
 	width: 98%;
 	height: 5%;
-	background-color: #CCC;
-	border: solid;
-	border-width: 5px;
-	border-color: #CCC;
-	border-radius: 15px; 
 }
 
 #textbox {
 	position: absolute;
+	background-color: #333;
+	color:#EEE;
 	left: 5px;
 	width:79.5%;
 	height: 100%;
+	border-radius: 15px;
+	border-style: none;
 }
 
 #submit {
@@ -25,6 +28,8 @@
 	right: 5px;
 	width: 19.5%;
 	height: 100%;
+	color:#EEE;
+	background-color: #333;
 	border-style: none;
 	border-radius: 15px;
 }
@@ -37,7 +42,8 @@
     transform: translate(-50%, 0%);
     width: 98%;
     height: 89%;
-	background-color: #CCC;
+	background-color: #333;
+	color:#EEE;
 	border: solid;
 	border-color: #CCC;
 	border-radius: 15px; 
