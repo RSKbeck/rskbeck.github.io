@@ -1,10 +1,14 @@
 body {
-	background-color: #DDD
+	background-color: #DDD;
+	font-family: Helvetica;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
 }
 
 #input {
 	position: absolute;
-	top: 1%;
+	top: 2%;
 	left: 50%;
 	margin-right: -50%;
 	transform: translate(-50%, 0%);
@@ -17,34 +21,35 @@ body {
 	background-color: #333;
 	color:#EEE;
 	left: 5px;
-	width:79.5%;
+	width:79%;
 	height: 100%;
 	border-radius: 15px;
 	border-style: none;
+	padding:7px;
 }
 
 #submit {
 	position: absolute;
 	right: 5px;
-	width: 19.5%;
+	width: 19%;
 	height: 100%;
 	color:#EEE;
 	background-color: #333;
 	border-style: none;
-	border-radius: 15px;
 }
 
 #result {
 	position: absolute;
-	top: 9%;
+	top: 8%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, 0%);
-    width: 98%;
+    width: 95%;
     height: 89%;
 	background-color: #333;
 	color:#EEE;
 	border: solid;
 	border-color: #CCC;
-	border-radius: 15px; 
+	border-radius: 15px;
+	padding: 7px;
 }
