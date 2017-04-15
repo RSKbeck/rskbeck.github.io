@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Ryan Kehlenbeck - Trick or Treat — 10 of 12</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="author" content="Ryan Kehlenbeck" />
+  <meta name="description" content="A page for the game Trick or Treat by Ryan Kehlenbeck." />
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+ </head>
+
+<body>
+
+<div class = "container">
+
+<div class ="sourcecoverimage">
+	<span><a href="Cover.png"><img src="Small Cover.png" border="1"></a></span>
+</div>
+
+<div class ="sourceintroduction">
+	<h1>
+		<span>Trick or Treat</span> <span class="pagination">— 10 of 12</span>
+	</h1>
+	<h2>
+		<span>Ryan Kehlenbeck</span>
+	</h2>
+	<div class ="sourcebibliography">
+		<span>Release 1</span>
+	</div>
+</div>
+
+<div class = "links">
+<ul>
+<li><a href="index.html">Home page</a></li><li><a href="source.html">Beginning</a></li><li><a href="source_7.html">Previous</a></li><li><a href="source_9.html">Next</a></li>
+</ul>
+</div>
+
+<div class = "source">
+<p class="indent0"><span class="heading">Section - House 2</span></p><p class="indent0">House 2 is south of W Elm Street. &quot;<span class="quote">This is the home of your kind elderly neighbor, Mrs. Oldstein. There are a few decorations in places that she was able to get to despite her health problems. Elm Street is to the North.</span>&quot; House 2 is in The Street. The printed name of House 2 is &quot;<span class="quote">Mrs. Oldstein's House</span>&quot;.</p><p class="indent0">To TOT in House 2:</p><p class="indent1">if Task2a is complete:</p><p class="indent2">say &quot;<span class="quote">You wait around for a while, but Mrs. Oldstein is probably asleep already.</span>&quot;;</p><p class="indent1">otherwise:</p><p class="indent2">say &quot;<span class="quote">After a minute or two of waiting, Mrs. Oldstein finally answers the door. You[</span><span class="substitution">if Jeffery is visible</span><span class="quote">] and Jeffery[</span><span class="substitution">end if</span><span class="quote">] politely say, [</span><span class="substitution">quotation mark</span><span class="quote">]Trick or treat![</span><span class="substitution">quotation mark</span><span class="quote">][</span><span class="substitution">line break</span><span class="quote">]</span>&quot;;</p><p class="indent2">if player is wearing a costume:</p><p class="indent3">say &quot;<span class="quote">Mrs. Oldstein says, [</span><span class="substitution">quotation mark</span><span class="quote">]Oh! Aren't you a spooky ghost?[</span><span class="substitution">if Jeffery is visible</span><span class="quote">]And what a cute baseball player![</span><span class="substitution">end if</span><span class="quote">]I remember when I used to trick or treat in my youth...[</span><span class="substitution">quotation mark</span><span class="quote">][</span><span class="substitution">line break</span><span class="quote">]Mrs. Oldstein hands you [</span><span class="substitution">if Jeffery is visible</span><span class="quote">]each [</span><span class="substitution">end if</span><span class="quote">]an orange, and as she rambles on about her youth, you leave.</span>&quot;;</p><p class="indent3">Now the player is carrying an orange;</p><p class="indent3">Now Task2a is complete;</p><p class="indent3">if Jeffery is visible:</p><p class="indent4">say &quot;<span class="quote">[</span><span class="substitution">line break</span><span class="quote">]Jeffery eats his orange.</span>&quot;;</p><p class="indent4">Heal Jeffery by 25;</p><p class="indent2">otherwise:</p><p class="indent3">say &quot;<span class="quote">Mrs. Oldstein says, [</span><span class="substitution">quotation mark</span><span class="quote">]Oh! Aren't you a little too old to be trick or treating? I remember when I used to trick or treat in my youth...[</span><span class="substitution">quotation mark</span><span class="quote">][</span><span class="substitution">line break</span><span class="quote">]Mrs. Oldstein rambles on about her youth, and you leave with nothing.</span>&quot;;</p><p class="indent3">if Task2b is complete:</p><p class="indent4">say &quot;<span class="quote">[</span><span class="substitution">italic type</span><span class="quote">]Maybe she would give you candy if she couldn't tell how old you are..[</span><span class="substitution">roman type</span><span class="quote">].</span>&quot;;</p><p class="indent3">otherwise:</p><p class="indent4">Now Task2b is complete.</p>
+</div>
+
+<div class ="notes">
+
+</div>
+
+</div>
+
+</body>
+
+</html>
