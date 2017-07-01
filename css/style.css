@@ -1,0 +1,16 @@
+body {
+  width:100%;
+  height:100%;
+  background-color:#111;
+  position:absolute;
+  top:0px;
+  left:0px;
+  overflow:hidden;
+}
+
+#splash{
+  left:50%;
+  top:50%;
+  position:relative;
+  transform:translate(-50%,-50%);
+}
