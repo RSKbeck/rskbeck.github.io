@@ -1,16 +1,105 @@
 body {
-  width:100%;
-  height:100%;
-  background-color:#111;
+  font-family:Helvetica;
+  color:#333;
+  font-size:20px;
+}
+#back{
   position:absolute;
-  top:0px;
   left:0px;
+  right:0px;
+  top:0px;
+  bottom:0px;
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #fe0079, #00fede); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #fe0079, #00fede); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #fe0079, #00fede); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #fe0079, #00fede); /* Standard syntax */
   overflow:hidden;
 }
+#cover{
+  position:absolute;
+  background-image:url(https://www.dropbox.com/s/5gcjmkwy9tbaqjo/rentes44.png?dl=1);
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  opacity:.5;
+  display:block;
+}
+cover:hover{
+  display:block;
+}
 
-#splash{
-  left:50%;
-  top:50%;
-  position:relative;
-  transform:translate(-50%,-50%);
+#frame{
+  position:absolute;
+  left:10%;
+  top:10%;
+  right:10%;
+  bottom:10%;
+  border:solid 10px;
+  border-color:#fff;
+  border-radius:15px;
+}
+
+#content{
+  position:absolute;
+  top:20px;
+  left:20px;
+  border-radius:5px;
+  right:20px;
+  bottom:20px;
+  background-color:#fff;
+  padding:20px;
+}
+
+#head{
+  position: relative;
+  font-size:36px;
+  padding: 10px;
+  font-weight: bold;
+  display: grid;
+  color:#333;
+  cursor: pointer;
+  width: fit-content;
+}
+
+#head:hover{
+  color:#fe0079;
+}
+
+#bttns{
+  width: fit-content;
+  height: -webkit-fill-available;
+  top: 10px;
+  right: 10px;
+  float: right;
+  bottom: 20px;
+  background-color: #333;
+  border-radius: 5px;
+  border-style: none;
+  padding: 10px;
+}
+
+.bttn{
+  color:#fff;
+  font-size:36px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.bttn:hover{
+  color:#00fede;
+}
+
+#pge{
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    color: #333;
+    display: grid;
+}
+
+a{
+  text-decoration: none;
 }
