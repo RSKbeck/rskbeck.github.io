@@ -4,7 +4,7 @@
 	width:40%;
 	box-shadow: inset 0px 0px 15px 5px #000;
 	border-radius:10px;
-	margin-left: 5%;
+	margin: 2.5%;
 }
 
 .shadow-box:after {
@@ -14,7 +14,7 @@
 }
 
 .box{
-	margin-left: 5%;
+	margin: 2.5%;
 	float:left;
 	position: relative;
 	width:40%;
@@ -57,7 +57,7 @@
 
 .cover{
 	font-family: Helvetica;
-	font-size:400%;
+	font-size:300%;
 	color:#fff;
 	background-color: rgba(0,0,0,.5);
 	width:100%;
