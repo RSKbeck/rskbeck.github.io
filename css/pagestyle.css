@@ -1,0 +1,37 @@
+body {
+  font-family:Helvetica;
+}
+
+#title {
+  position:relative;
+  left:0px;
+  right:0px;
+  text-align:center;
+  font-weight:bold;
+  font-size:250%;
+  padding-top:20px;
+  margin-bottom:-40px;
+}
+
+#bod {
+  position:relative;
+  left:0px;
+  right:0px;
+  text-align:center;
+  padding:60px;
+}
+
+.subtitle {
+  text-align:left;
+  font-weight:bold;
+  font-size:18px;
+}
+
+p {
+  padding-left:40px;
+  padding-right:40px;
+}
+
+.code{
+  font-family:courier;
+}

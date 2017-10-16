@@ -24,6 +24,10 @@ $(document).ready(function() {
     $("#pge").load('https://rskbeck.github.io/pages/art.htm'); 
   });
 
+  $("#wbs").click(function() {
+    $("#pge").load('https://rskbeck.github.io/pages/games/wbs.htm'); 
+  });
+
   $('#screen').click(hide);
   $('#closer').click(hide);
 });

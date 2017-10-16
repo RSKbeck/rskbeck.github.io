@@ -1,0 +1,84 @@
+<head>
+      <link rel="stylesheet" href="https://rskbeck.github.io/css/pagestyle.css">
+</head>
+
+<body>
+  <div id='title'>Water Balloon Simulator</div>
+<div id='bod'>
+  <img src='https://rskbeck.github.io/img/wbs/main.jpg' />
+  <div class='subtitle'>Overall goal of the project</div>
+  <p>
+    The Overall goal of the project was to create a water balloon mesh that can roll around in a 3D environment. The water balloon is procedurally generated, deformable, and collides with other objects in the world. The environment contains a ground level with a grass texture, boxes with a wooden box texture, and a “sun” that acts as a light source. The sun and balloon use Blinn-Phong shading with alpha blending so they are slightly transparent. The balloon is moved about the scene using the ‘wasd’ keys and moves with respect to the camera. The camera is a third person style camera focused on the center of the balloon that can switch between following the balloon or being locked to a certain position with the ‘f’ key.</p>
+  <img src='https://rskbeck.github.io/img/wbs/overall.jpg' />
+  <div class='subtitle'>Creating the Water Balloon</div>
+  <p>The water balloon is generated using spherical coordinates. Given the center, radius, number of vertical subdivisions, and number of horizontal subdivisions, the location of each vertex in the water ballon can be found with the following formulas. The “knot” on top of the balloon is simply a circle of points connected to the north pole.
+  </p>
+<b>Bottom Point</b>
+<div class='code'><b>South Pole</b> = (center.x, center.y - radius, center.z)</div>
+</br>
+<b>Body</b>
+<div class='code'>
+For [<b>n</b> = 1:horizontalSlices]</br>
+[<b>m</b> = 0:verticalSlices - 1]</br>
+<b>θ</b> = π * ((horizontalSlices + 1) - n) / (horizontalSlices + 1)</br>
+<b>φ</b> = 2 * π * m / verticalSlices</br></br>
+<b>x</b> = center.x + radius * sin(θ) * sin(φ)</br>
+<b>y</b> = center.y + radius * cos(θ)</br>
+<b>z</b> = center.z + radius * sin(θ) * cos(φ)</div></br>
+<b>Top Point</br>
+<div class='code'>North Pole</b> = (center.x, center.y + radius, center.z)</div>
+<img src='https://rskbeck.github.io/img/wbs/mesh.jpg' />
+  <div class='subtitle'>Calculating Normals</div>
+  <p>In order for the displacement of each vertex of the balloon to be visible, the normals had to be redrawn at every step. If they were not, the original normals would be used which would make the balloon always reflect light like a perfect sphere. The normal for each vertex is calculated by normalizing the sum of the normals for each adjacent face.</p>
+<b>Face Normal</b></br>
+<div class='code'>
+If a triangle consists of vertices a, b, and c:</br>
+<b>v1</b> = b - a</br>
+<b>v2</b> = c - a</br>
+<b>face.normal</b> = v1.cross(v2)</div></br>
+
+<b>Vertex Normal</b></br>
+<div class='code'>
+For each face:</br>
+<b>a.normal</b> += face.normal</br>
+<b>b.normal</b> += face.normal</br>
+<b>c.normal</b> += face.normal</br></br>
+For each vertex:</br>
+<b>vertex.normal</b>.normalize()</div>
+<p>
+The result can be seen in the following images where the partially flattened bottom of the balloon is not lit and the fully flattened balloon reflects all of the light properly.</p>
+<img src='https://rskbeck.github.io/img/wbs/flat1.jpg' /></br>
+<img src='https://rskbeck.github.io/img/wbs/flat2.jpg' />
+  <div class='subtitle'>Physics</div>
+  <p>The water balloon maintains its shape by keeping an array of displacements for each point in relation to the center of the balloon. The center of the balloon is then moved and the points adjust themselves accordingly based on the following formulas from the paper <i>Meshless Deformations Based On Shape Matching</i>. The expected position g(t) for each point is calculated at each step based on the center point and α is the stiffness factor between 0 and 1.</p>
+<div class='code'>
+<b>force(t)</b> = mass * gravity</br>
+<b>velocity(t + h)</b> = velocity(t) + α * (g(t) - position(t))/h + h * force(t) / m</br>
+<b>position(t + h)</b> = position(t) + h * velocity(t + h)</div>
+<p>
+Even though these equations did move each point to its expected position, they ended up overshooting the position and the forces continued to grow. I added a random damping component to each point to create a wobble effect and gravity to make the balloon a little weighted. The formulas resulted in the following:</p>
+<div class='code'>
+<b>damping</b> = randomFloat(-0.8, 7.5)</br>
+<b>force(t)</b> = mass * gravity - damping * v(t)</div>
+<p>
+The values used for stiffness and gravity were 0.01 and (0, -10, 0) respectively. This resulted in the balloon wobbling to a stop instead of overshooting the expected position or stopping at exactly the expected position right away.</p>
+<img src='https://rskbeck.github.io/img/wbs/bounce.gif' />
+  <div class='subtitle'>Collision Detection</div>
+  <p>In order to detect collisions between the boxes and the water balloon, at each step, each box takes the position of the water balloon’s center and the balloon’s radius and determines whether the point on the outside of the water balloon that is closest to the center of the box is at, or inside the bounds of the box. If the balloon is inside a box, the distance that it is inside of the box is added to the center of the balloon in the opposite direction of the collision, resulting in the balloon “bouncing” backwards.</p>
+<img src='https://rskbeck.github.io/img/wbs/collision2.gif' />
+  <div class='subtitle'>References</div>
+  <p>Wikipedia - For procedurally drawing a sphere</br>
+<a href='https://en.wikipedia.org/wiki/Spherical_coordinate_system'>https://en.wikipedia.org/wiki/Spherical_coordinate_system</a></br>
+<a href='https://en.wikipedia.org/wiki/List_of_common_coordinate_transformations#From_spherical_coordinates'>https://en.wikipedia.org/wiki/List_of_common_coordinate_transformations#From_spherical_coordinates</a></br></br>
+Stack Overflow - For figuring out how to calculate the vertex normals</br>
+<a href='http://stackoverflow.com/questions/16340931/calculating-vertex-normals-of-a-mesh'>http://stackoverflow.com/questions/16340931/calculating-vertex-normals-of-a-mesh</a></br></br>
+Meshless Deformations Based on Shape Matching - For the sphere physics</br>
+<a href='http://matthias-mueller-fischer.ch/publications/MeshlessDeformations_SIG05.pdf'>http://matthias-mueller-fischer.ch/publications/MeshlessDeformations_SIG05.pdf</a></br></br>
+Texturelib - For the grass texture</br>
+<a href='http://texturelib.com/Textures/grass/grass/grass_grass_0071_02_preview.jpg'>http://texturelib.com/Textures/grass/grass/grass_grass_0071_02_preview.jpg</a></br></br>
+Textures101.com - For the box texture</br>
+<a href='http://textures101.com/textures/Wood/Planks/2011/7/18/tn1_seamless_9_bcluz.jpg'>http://textures101.com/textures/Wood/Planks/2011/7/18/tn1_seamless_9_bcluz.jpg</a></p>
+</div>
+  
+  
+</body>
