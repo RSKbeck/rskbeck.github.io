@@ -162,3 +162,8 @@ a{
   bottom:0px;
   padding-top:50px;
 }
+
+#padder {
+  padding-left: 20px;
+  padding-right: 20px;
+}
