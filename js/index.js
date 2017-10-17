@@ -28,6 +28,10 @@ $(document).ready(function() {
     $("#scroller").load('https://rskbeck.github.io/pages/games/wbs.htm'); 
   });
 
+  $("#hme").click(function() {
+  	$("#scroller").load('https://rskbeck.github.io/pages/bio.htm');
+  });
+
   $('#screen').click(hide);
   $('#closer').click(hide);
 });

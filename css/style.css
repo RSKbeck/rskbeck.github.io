@@ -53,14 +53,16 @@ cover:hover{
 }
 
 #head{
-  position: relative;
   font-size:36px;
   padding: 10px;
   font-weight: bold;
-  display: grid;
   color:#333;
   cursor: pointer;
+  left:50%;
+  transform: translate(-50%);
+  text-align: center;
   width: fit-content;
+  position: absolute;
 }
 
 #head:hover{
@@ -89,6 +91,15 @@ cover:hover{
 
 .bttn:hover{
   color:#fe0079;
+}
+
+#hme {
+  position: absolute;
+  bottom: 10px;
+}
+
+#hme:hover {
+  color:#00fede;
 }
 
 #pge{
