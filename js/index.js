@@ -24,10 +24,6 @@ $(document).ready(function() {
     $("#scroller").load('https://rskbeck.github.io/pages/art.htm'); 
   });
 
-  $("#wbs").click(function() {
-    $("#scroller").load('https://rskbeck.github.io/pages/games/wbs.htm'); 
-  });
-
   $("#hme").click(function() {
   	$("#scroller").load('https://rskbeck.github.io/pages/bio.htm');
   });
