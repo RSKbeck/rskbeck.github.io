@@ -21,11 +21,11 @@ function hide() {
 
 $(document).ready(function() {
   $("#art").click(function() {
-    $("#pge").load('https://rskbeck.github.io/pages/art.htm'); 
+    $("#scroller").load('https://rskbeck.github.io/pages/art.htm'); 
   });
 
   $("#wbs").click(function() {
-    $("#pge").load('https://rskbeck.github.io/pages/games/wbs.htm'); 
+    $("#scroller").load('https://rskbeck.github.io/pages/games/wbs.htm'); 
   });
 
   $('#screen').click(hide);

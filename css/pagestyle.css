@@ -35,3 +35,9 @@ p {
 .code{
   font-family:courier;
 }
+
+a {
+  text-decoration: none;
+  word-wrap: break-word;
+  color:#00fede;
+}

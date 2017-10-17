@@ -64,15 +64,15 @@ cover:hover{
 }
 
 #head:hover{
-  color:#fe0079;
+  color:#00fede;
 }
 
 #bttns{
-  width: fit-content;
+  position: absolute;
+  width: 15%;
   height: -webkit-fill-available;
-  top: 10px;
-  right: 10px;
-  float: right;
+  top: 20px;
+  left: 20px;
   bottom: 20px;
   background-color: #333;
   border-radius: 5px;
@@ -82,13 +82,13 @@ cover:hover{
 
 .bttn{
   color:#fff;
-  font-size:36px;
+  font-size:150%;
   font-weight: bold;
   cursor: pointer;
 }
 
 .bttn:hover{
-  color:#00fede;
+  color:#fe0079;
 }
 
 #pge{
@@ -97,7 +97,11 @@ cover:hover{
     padding-right: 30px;
     text-align: center;
     color: #333;
-    display: grid;
+    position: absolute;
+    left:18%;
+    right:0px;
+    top:0px;
+    bottom: 0px;
 }
 
 a{
@@ -137,4 +141,13 @@ a{
   position:absolute;
   right:5%;
   top:10%;
+}
+#scroller {
+  position:absolute;
+  left:0px;
+  right:0px;
+  overflow:auto;
+  top:0px;
+  bottom:0px;
+  padding-top:50px;
 }
