@@ -1,14 +1,14 @@
 function show(urrl) {
   $('#fader').css('display','block');
   $('#viewer').css('background-color','#fff');
-  $('#viewer').html(urrl);
+  $('#viewer').html("<img class=\'viewimg\' src=\'https:\/\/rskbeck.github.io\/img\/art\/" + urrl + "\' \/>");
   $('#fader').animate({opacity:1},1000);
 }
 
 function showcol(urrl, col) {
   $('#fader').css('display','block');
   $('#viewer').css('background-color',col);
-  $('#viewer').html(urrl);
+  $('#viewer').html("<img class=\'viewimg\' src=\'https:\/\/rskbeck.github.io\/img\/art\/" + urrl + "\' \/>");
   $('#fader').animate({opacity:1},1000);
 }
 
