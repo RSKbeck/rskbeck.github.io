@@ -17,8 +17,10 @@
 	margin-left: 5%;
 	float:left;
 	position: relative;
-	width:40%;
+	width:27%;
+	height:27%;
 	border-radius:10px;
+	margin-bottom: 5%;
 }
 
 .box:after {
@@ -29,8 +31,8 @@
 
 .border-box{
 	position: relative;
-	width:40%;
-	
+	width:27%;
+	height: 27%
 }
 
 .border-box:after {
@@ -89,4 +91,10 @@
   transform: translate(0%,-50%);
   text-align: center;
   width: 100%;
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 5%;
 }
