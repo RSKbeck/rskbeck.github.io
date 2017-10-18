@@ -147,6 +147,8 @@ a{
   background-color:#fff;
   border-radius:10px;
   padding:10px;
+  max-height: 90%;
+  max-width: 90%;
 }
 #closer {
   position:absolute;
