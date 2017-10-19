@@ -77,3 +77,11 @@
 	flex-wrap: wrap;
 	margin-top: 5%;
 }
+
+#headtitle {
+	font-weight: bold;
+	font-size: 40px;
+	text-align: left;
+	margin-left: 5%;
+	margin-bottom: 5%;
+}
