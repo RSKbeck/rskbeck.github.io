@@ -1,0 +1,21 @@
+<head>
+      <link rel="stylesheet" href="https://rskbeck.github.io/css/pagestyle.css">
+</head>
+
+<body>
+  <div id='title'>CVBRM</br><div class="subtitle" style="text-align:center">Ryan Kehlenbeck & Zack Cody</div></div>
+<div id='bod'>
+  <img src='https://rskbeck.github.io/img/cvbrm/cvbrmthumb.png' style="width:70%"  />
+  <p>CVBRM is an app for cyclists and runners, allowing them to create paths from images. CVBRM was completed with a friend of mine over the course of two quarters as a Senior Project at Cal Poly. The project was chosen to be presented to  Cal Poly's Industry Advisory Board.</p></br>
+
+  <p>After an early meeting to decide on UI features and style, I created High Fidelity mockups of the UI and later implemented them.</p></br>
+
+  <p>I used OpenCV to extract edges from a given image. We researched how to perform edge detection using OpenCV and decided to use the Canny algorithm to locate the edges and extract them from the image. The paths generated were not perfect, so we gave the user access to a few parameters to adjust the results. We blur the image and set a threshold for the Canny algorithm to extract edges, so these are the parameters the user can adjust.</p></br>
+
+  <p>Given the restraint of using only 100 points for Google's Road APIs, I wrote an algorithm that reduces path points while retaining its original shape. Dupliciate points from the edge detection, points on relatively straight segments or zig-zags, and points with the lowest resulting error were removed. We defined the error caused by removing a point as the distance from the original point to the line segment without that point. Points were removed from lowest to highest error until there were only 100 points remaining.</p></br>
+
+  <p>Having implemented a vertical prototype for drawing on Android using the Android Graphics Library for another project I worked on, Stylo, I created a canvas for users to draw images in app that would then be converted to paths.</p></br>
+
+  <p>I also implemented path saving and loading along with the original images the paths were generated from.</p>
+</div>
+</body>
