@@ -21,19 +21,23 @@ function hide() {
 
 $(document).ready(function() {
   $("#art").click(function() {
-    $("#scroller").load('https://rskbeck.github.io/pages/art.htm'); 
+    $("#scroller").load('https://rskbeck.github.io/pages/art.htm');
+    $('#scroller').scrollTop(0); 
   });
 
   $("#gme").click(function() {
-    $("#scroller").load('https://rskbeck.github.io/pages/games.htm'); 
+    $("#scroller").load('https://rskbeck.github.io/pages/games.htm');
+    $('#scroller').scrollTop(0);
   });
 
   $("#pro").click(function() {
-    $("#scroller").load('https://rskbeck.github.io/pages/proj.htm'); 
+    $("#scroller").load('https://rskbeck.github.io/pages/proj.htm');
+    $('#scroller').scrollTop(0);
   });
 
   $("#hme").click(function() {
   	$("#scroller").load('https://rskbeck.github.io/pages/bio.htm');
+    $('#scroller').scrollTop(0);
   });
 
   $('#screen').click(hide);
