@@ -39,7 +39,7 @@ $(document).ready(function() {
   });
 
   $("#hme").click(function() {
-    window.location.hash = 'bio';
+    window.location.hash = '';
   	$("#scroller").load('https://rskbeck.github.io/pages/bio.htm');
     $('#scroller').scrollTop(0);
   });
