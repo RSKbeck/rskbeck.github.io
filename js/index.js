@@ -57,6 +57,9 @@ $(document).ready(function() {
       else if ($.inArray(hash.toLowerCase(), projs) > -1) {
         hash = 'projs/' + hash;
       }
+      else if (hash = "") {
+        hash = "bio";
+      }
       $("#scroller").load('https://rskbeck.github.io/pages/' + hash + '.htm');
       $('#scroller').scrollTop(0);
   }
