@@ -16,7 +16,7 @@ $('#canycover').click(function() {
 	$('#scroller').scrollTop(0);
 });
 
-$('#ctfcover').click(function() {
+$('#wipcover').click(function() {
 	window.location.hash = 'wip';
 	$('#scroller').load('https://rskbeck.github.io/pages/games/wip.htm');
 	$('#scroller').scrollTop(0);
